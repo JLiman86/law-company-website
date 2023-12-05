@@ -7,9 +7,9 @@ import { IoMenu } from "react-icons/io5";
 import SideBar from "./SideBar";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="fixed w-full top-0 left-0">
+    <header className="fixed w-full top-0 left-0 z-20">
       <div className="wrapper">
         <nav className="flex items-center justify-between py-3">
           <img src={Logo} alt="" />

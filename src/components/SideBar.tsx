@@ -12,7 +12,7 @@ const SideBar = ({ setIsOpen, isOpen }: SideBarProps) => {
     <div
       className={`${
         isOpen ? "translate-x-0" : "translate-x-full"
-      }  fixed w-screen h-screen top-0 left-0 bg-primary translate-x-full flex items-center justify-center transition-all`}
+      }  fixed w-screen h-screen top-0 left-0 bg-primary flex items-center justify-center transition-all`}
     >
       <ul>
         {navigation.map((item, idx) => (
