@@ -9,7 +9,7 @@ const Skills = () => {
     >
       <div className="wrapper pt-20 pb-10">
         <h2 className="text-5xl p-3 font-semibold">What we do</h2>
-        <p className="max-w-[600px] mx-auto mt-10">
+        <p className=" max-w-[600px] mx-auto mt-10">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error illum,
           odio recusandae deserunt nesciunt voluptate praesentium esse aut est
           quidem reiciendis voluptatem eius, nemo ipsum vel ullam veniam fugit

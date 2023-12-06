@@ -1,6 +1,9 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Skills from "./components/Skills";
+import Subscribe from "./components/Subscribe";
+import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
 
 function App() {
@@ -10,6 +13,9 @@ function App() {
       <Hero />
       <Testimonials />
       <Skills/>
+      <Team/>
+      <Subscribe/>
+      <Footer/>
     </div>
   );
 }

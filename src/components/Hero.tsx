@@ -4,10 +4,10 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-[70px] bg-gradient-to-b
+      className=" bg-gradient-to-b
      from-orange-200 to-white"
     >
-      <div className=" wrapper grid grid-cols-1 md:grid-cols-2">
+      <div className=" wrapper grid grid-cols-1 md:grid-cols-2 pt-[70px]">
         <div className="relative pb-10">
           <div className="pt-14 text-center">
             <h1 className="leading-[70px]  font-primary  text-6xl font-bold text-primary">
@@ -21,7 +21,8 @@ const Hero = () => {
             </p>
           </div>
           <form
-            className="bg-accent p-10 mt-10 block max-w-[400px] mx-auto md:absolute 
+            onSubmit={(e) => e.preventDefault()}
+            className="bg-accent p-8 mt-10 block max-w-[400px] mx-auto md:absolute 
           md:w-[350px] lg:w-[400px]  md:left-1/2 md:-translate-x-1/2"
           >
             <h2 className="font-bold  text-2xl text-white text-center">

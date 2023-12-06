@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Logo from "../assets/img/logo.png";
 import { navigation } from "../data";
@@ -10,17 +10,22 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolling, isScrolling] = useState(false);
 
-
-  useEffect(()=>{
-     window.addEventListener('scroll',()=>{
-      window.scrollY > 0 ? isScrolling(true) : isScrolling(false)
-     })
-  })
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 0 ? isScrolling(true) : isScrolling(false);
+    });
+  });
   return (
-    <header className={`${scrolling ? "bg-white shadow-2xl" : ""}  fixed w-full top-0 left-0 z-20 transition-all`}>
+    <header
+      className={`${
+        scrolling ? "bg-white shadow-2xl" : ""
+      }  fixed w-full top-0 left-0 z-20 transition-all`}
+    >
       <div className="wrapper">
         <nav className="flex items-center justify-between py-3">
-          <img src={Logo} alt="" />
+          <Link className="cursor-pointer" to="home">
+            <img src={Logo} alt="" />
+          </Link>
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}
@@ -50,7 +55,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <SideBar isOpen={isOpen} setIsOpen={setIsOpen}  />
+      <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
     </header>
   );
 };
