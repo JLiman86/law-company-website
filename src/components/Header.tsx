@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 import Logo from "../assets/img/logo.png";
 import { navigation } from "../data";
@@ -8,8 +8,16 @@ import SideBar from "./SideBar";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolling, isScrolling] = useState(false);
+
+
+  useEffect(()=>{
+     window.addEventListener('scroll',()=>{
+      window.scrollY > 0 ? isScrolling(true) : isScrolling(false)
+     })
+  })
   return (
-    <header className="fixed w-full top-0 left-0 z-20">
+    <header className={`${scrolling ? "bg-white shadow-2xl" : ""}  fixed w-full top-0 left-0 z-20 transition-all`}>
       <div className="wrapper">
         <nav className="flex items-center justify-between py-3">
           <img src={Logo} alt="" />
@@ -26,7 +34,7 @@ const Header = () => {
               return (
                 <li key={idx}>
                   <Link
-                    offset={0}
+                    offset={-70}
                     spy={true}
                     smooth={true}
                     duration={500}

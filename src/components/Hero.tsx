@@ -2,9 +2,13 @@ import Person from "../assets/img/lawyer_banner.png";
 
 const Hero = () => {
   return (
-    <section className="pt-[70px] bg-orange-100">
+    <section
+      id="home"
+      className="pt-[70px] bg-gradient-to-b
+     from-orange-200 to-white"
+    >
       <div className=" wrapper grid grid-cols-1 md:grid-cols-2">
-        <div className="relative">
+        <div className="relative pb-10">
           <div className="pt-14 text-center">
             <h1 className="leading-[70px]  font-primary  text-6xl font-bold text-primary">
               Your Problem <br />
@@ -16,8 +20,10 @@ const Hero = () => {
               alias enim?
             </p>
           </div>
-          <form className="bg-accent p-10 mt-10 block max-w-[400px] mx-auto md:absolute 
-          md:w-[350px] lg:w-[400px]  md:left-1/2 md:-translate-x-1/2">
+          <form
+            className="bg-accent p-10 mt-10 block max-w-[400px] mx-auto md:absolute 
+          md:w-[350px] lg:w-[400px]  md:left-1/2 md:-translate-x-1/2"
+          >
             <h2 className="font-bold  text-2xl text-white text-center">
               Get an appointment
             </h2>
